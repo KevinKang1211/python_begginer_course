@@ -16,7 +16,7 @@ for x in [0, 1, 2, 3]:
     r+=1      #列表中只有1和3會跑到下面兩行程式碼，因此r只會加兩次
 print("最後的r:", r)
 
-# else的 簡易範例 (重要)
+# else的 簡易範例
 sum = 0
 for a in range(11):
     sum+=a

@@ -18,7 +18,7 @@ with open("test.txt", mode="w", encoding="utf-8") as file:
 sum=0
 with open("data.txt", mode="r", encoding="utf-8") as file:
     for line in file:  #一行一行讀取→讀到"5"、放進line
-        sum+=int(line) #原本是字串形式
+        sum+=int(line) #原本是字串
 print(sum)
 
 ###使用JSON格式讀取、複寫檔案(*搭配JavaScript課程的JSON介紹)
@@ -39,4 +39,4 @@ json_test["Name"]="New Name" #修改變數中的資料
 with open("config.json", mode="w", encoding="utf-8") as file:
     json.dump(json_test, file)
 
-#json.load() / json.dump(要寫入的資料,檔案物件)
+#json.load() / json.dump(要寫入的資料,檔案csl物件)

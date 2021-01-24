@@ -9,12 +9,11 @@ class Point:
     def distance(self, targetX, targetY):
         return(((self.x-targetX)**2)+((self.y-targetY)**2))**0.5
         
-p = Point(3, 4) 
-    #3放到x, 4放到y
-p.show() #呼叫實體方法 (本質上是函式，呼叫方法一樣)
+p = Point(3, 4)     #3放到x, 4放到y
+p.show()            #呼叫實體方法 (本質上是函式，呼叫方法一樣)
 result = p.distance(0,0) 
-    # 0放到targetX, 0放到targetY
-    # 功能: 計算座標(3,4)和座標(0,0)之間的距離
+                    # 0放到targetX, 0放到targetY
+                    # 功能: 計算座標(3,4)和座標(0,0)之間的距離
 print(result)
 
 
@@ -23,7 +22,8 @@ class File:
     #初始化函式
     def __init__(self, name):
         self.name = name
-        self.file = None #尚未開啟檔案: 初期是 None
+        self.file = None #尚未開啟檔案: 初期是 None 
+
         #建立兩個實體屬性: 第一個name從參數來，另一個屬性file，一開始是None
     #實體方法(共兩個)
     def open(self): 

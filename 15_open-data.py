@@ -13,13 +13,16 @@ import urllib.request as request
 import json
 src = "https://data.taipei/api/v1/dataset/296acfa2-5d93-4706-ad58-e83cc951863c?scope=resourceAquire"
 with request.urlopen(src) as response:
-    data = json.load(response) #利用json模組處理json的資料格式
+    data = json.load(response) 
+    # `把抓到的東西存成response這個變數(通常都用response)
+    # 利用json模組處理json的資料格式
 
 ###取得「公司名稱」，並列表出來
 clist = data["result"]["results"]
-    #JSON格式要搞懂→字典 裡面的 字典 裡面的 列表 裡面的 字典
+    #本檔案JSON格式 : 字典 裡面的 字典 裡面的 列表 裡面的 字典
 with open("data_ch15.txt", "w", encoding="utf-8") as file:
     for company in clist:
         file.write(company["公司名稱"]+"\n")
+    
     #回顧dictionary找value寫法；觀察可發現最內層有"公司名稱"的key
-    #檔案寫入公司的名稱，一行一行表示(因為有換行符號)
+    #檔案寫入公司的名稱，「一行一行」表示(因為有換行符號)
